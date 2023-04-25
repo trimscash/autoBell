@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=600">
+
+
+	<link rel="shortcut icon" type="image/png" href="favicon.png">
+	<link rel="icon" type="image/png" href="./favicon.png">
+	<meta charset="utf-8">
+	<title>自動卓上ベル</title>
+	<link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+	<div id="header">
+		<div class="title">自動卓上ベル</div>
+	</div>
+
+	<div id="main">
+		<br>
+		<br>
+
+		<form action="./ring" method="post">
+			<button id="start">RING!!</button>
+		</form>
+		<form action="./setting" method="post">
+			<br><br>
+			今から
+			<input type="number" name="duration" value="-1" min="-1" max="2147483640">
+			秒ごとにならす.
+			<br>
+			<span style="font-size: 12px;">-1で無効化</span>
+			<br>
+			<button id="start">SETTING!!</button>
+		</form>
+
+	</div>
+
+	<div id="footer">
+		<div class="cash"><a href="https://github.com/trimscash/akeome/">ソースコード/</a><a
+				href="https://twitter.com/trims_cash">@trims_cash</a><span style="font-size:1vh;">←誤り等</span>
+		</div>
+	</div>
+</body>
+
+</html>
