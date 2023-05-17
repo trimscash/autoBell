@@ -14,6 +14,9 @@
 #define ARM_UP 120
 
 #define HTTP_PORT 80
+
+#define TIMEMAX 2147483642
+
 AsyncWebServer server(HTTP_PORT);
 
 Servo myservo;
@@ -29,7 +32,7 @@ const char *wifi_password = "sample";
 hw_timer_t *timer = NULL;
 
 void IRAM_ATTR onTimer() {
-	if (time_counter > 2147483642) {
+	if (time_counter > TIMEMAX + 2) {
 		time_counter = 0;
 	}
 	time_counter++;
@@ -68,7 +71,7 @@ void setting(long d) {
 	if (d < 0) {
 		time_counter = 0;
 		auto_flag = false;
-	} else if (d <= 2147483640) {
+	} else if (d <= TIMEMAX) {
 		time_counter = 0;
 		duration = d;
 		auto_flag = true;
