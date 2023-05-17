@@ -15,7 +15,7 @@
 
 #define HTTP_PORT 80
 
-#define TIMEMAX 2147483642
+#define TIMEMAX 2147483640
 
 AsyncWebServer server(HTTP_PORT);
 
